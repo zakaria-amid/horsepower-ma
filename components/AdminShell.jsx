@@ -5,7 +5,7 @@ const NAV = [
   { key: 'promos', label: 'Promos' },
   { key: 'essais', label: 'Essais vidéo' },
   { key: 'comparatifs', label: 'Comparatifs' },
-  { key: 'leads', label: 'Leads' },
+  { key: 'leads', label: 'Leads', href: '/admin/leads' },
   { key: 'imports', label: 'Imports automatiques' },
   { key: 'reglages', label: 'Réglages' },
 ];

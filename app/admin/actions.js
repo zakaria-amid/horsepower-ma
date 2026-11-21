@@ -29,7 +29,16 @@ function date(form, key) {
   const v = text(form, key, 10);
   return v && /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : null;
 }
+function refreshSite() {
+  try {
+    revalidatePath('/', 'layout');
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 function back(path, kind, message) {
+  refreshSite();
   const sep = path.includes('?') ? '&' : '?';
   return `${path}${sep}${kind}=${encodeURIComponent(message)}`;
 }

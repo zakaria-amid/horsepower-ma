@@ -30,7 +30,7 @@ export default async function AdminPage() {
     { label: 'Marques', value: s.brands, hint: 'Dans le catalogue', href: '/admin/marques' },
     { label: 'Modèles', value: s.models, hint: s.ok ? `${s.published} publiés` : '', href: '/admin/modeles' },
     { label: 'Versions', value: s.versions, hint: s.ok ? `${s.priced} avec un prix` : '', href: '/admin/modeles' },
-    { label: 'Leads', value: s.leads, hint: '30 derniers jours' },
+    { label: 'Leads', value: s.leads, hint: '30 derniers jours', href: '/admin/leads' },
   ];
 
   const steps = [

@@ -29,22 +29,22 @@ select,input{font:inherit}
 <!-- HERO -->
 <section style="position: relative; background: #E6E7E9; padding: 20px 24px 0">
 <header style="max-width: 1320px; margin: 0 auto; background: #FFFFFF; border-radius: 999px; padding: 10px 10px 10px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; box-shadow: 0 8px 30px rgba(14,14,16,0.06)">
-<a href="#" aria-label="horsepower.ma, accueil" style="display: flex; align-items: baseline; gap: 3px">
+<a href="/" aria-label="horsepower.ma, accueil" style="display: flex; align-items: baseline; gap: 3px">
 <span style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -0.3px">HORSEPOWER</span><span style="font-family: Poppins, sans-serif; font-weight: 400; font-size: 15px; color: #4A4D55">.ma</span>
 </a>
 <nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; gap: 6px 28px; font-size: 14px; font-weight: 500">
-<a href="#">Neuf</a>
-<a href="#">Essais</a>
-<a href="#">Comparatifs</a>
-<a href="#">Promos</a>
-<a href="#">Prix / cheval</a>
-<a href="#">Actu</a>
+<a href="/neuf">Neuf</a>
+<a href="/essais">Essais</a>
+<a href="/comparatifs">Comparatifs</a>
+<a href="/promos">Promos</a>
+<a href="/prix-par-cheval">Prix / cheval</a>
+<a href="/actualites">Actu</a>
 </nav>
 <div style="display: flex; align-items: center; gap: 8px">
-<button type="button" aria-label="Rechercher" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DADBDE; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<a href="/neuf" aria-label="Rechercher" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DADBDE; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
-</button>
-<a href="#" style="min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 20px; border-radius: 999px; background: #0E0E10; color: #FFFFFF; font-weight: 600; font-size: 14px">Trouver ma voiture <span aria-hidden="true">→</span></a>
+</a>
+<a href="/neuf" style="min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 20px; border-radius: 999px; background: #0E0E10; color: #FFFFFF; font-weight: 600; font-size: 14px">Trouver ma voiture <span aria-hidden="true">→</span></a>
 </div>
 </header>
 
@@ -54,8 +54,8 @@ select,input{font:inherit}
 <h1 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 500; font-size: clamp(40px, 5vw, 68px); line-height: 1.02; letter-spacing: -1px; text-transform: uppercase">Prix.<br>Puissance.<br>Vérité.</h1>
 <p style="margin: 0; color: #4A4D55; font-size: 17px; max-width: 440px">Tous les prix des voitures neuves au Maroc, nos essais vidéo en darija et le classement prix par cheval.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#" style="min-height: 50px; display: flex; align-items: center; gap: 10px; padding: 0 24px; background: #E10600; color: #FFFFFF; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase">Voir les prix <span aria-hidden="true">→</span></a>
-<a href="#" style="min-height: 50px; display: flex; align-items: center; gap: 10px; padding: 0 24px; border: 1.5px solid #0E0E10; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase">Regarder l'essai
+<a href="/neuf" style="min-height: 50px; display: flex; align-items: center; gap: 10px; padding: 0 24px; background: #E10600; color: #FFFFFF; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase">Voir les prix <span aria-hidden="true">→</span></a>
+<a href="/essais" style="min-height: 50px; display: flex; align-items: center; gap: 10px; padding: 0 24px; border: 1.5px solid #0E0E10; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase">Regarder l'essai
 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z" fill="#0E0E10"></path></svg></a>
 </div>
 </div>
@@ -67,25 +67,25 @@ select,input{font:inherit}
 
 <!-- SEARCH BAR -->
 <div style="position: relative; max-width: 1120px; margin: -64px auto 0; transform: translateY(64px)">
-<div role="tablist" aria-label="Type de recherche" style="display: flex; flex-wrap: wrap; margin-left: 24px">
-<button type="button" role="tab" aria-selected="true" style="min-height: 44px; padding: 0 22px; border: 0; background: #FFFFFF; font-weight: 600; font-size: 14px; cursor: pointer">Neuf</button>
-<button type="button" role="tab" aria-selected="false" style="min-height: 44px; padding: 0 22px; border: 0; background: #D9DADD; color: #0E0E10; font-weight: 500; font-size: 14px; cursor: pointer">Électrique &amp; hybride</button>
-<button type="button" role="tab" aria-selected="false" style="min-height: 44px; padding: 0 22px; border: 0; background: #C9CBCF; color: #0E0E10; font-weight: 500; font-size: 14px; cursor: pointer">Promos</button>
+<div style="display: flex; flex-wrap: wrap; margin-left: 24px">
+<a href="/neuf" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 0; background: #FFFFFF; font-weight: 600; font-size: 14px; cursor: pointer">Neuf</a>
+<a href="/neuf?energie=%C3%89lectrique" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 0; background: #D9DADD; color: #0E0E10; font-weight: 500; font-size: 14px; cursor: pointer">Électrique &amp; hybride</a>
+<a href="/promos" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border: 0; background: #C9CBCF; color: #0E0E10; font-weight: 500; font-size: 14px; cursor: pointer">Promos</a>
 </div>
-<form style="background: #FFFFFF; box-shadow: 0 20px 50px rgba(14,14,16,0.10); display: flex; flex-wrap: wrap; align-items: stretch">
+<form action="/neuf" method="get" style="background: #FFFFFF; box-shadow: 0 20px 50px rgba(14,14,16,0.10); display: flex; flex-wrap: wrap; align-items: stretch">
 <label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 2px; padding: 16px 22px; border-right: 1px solid #ECEDEF; font-size: 12px; color: #4A4D55">Marque
-<select style="border: 0; background: transparent; color: #0E0E10; font-weight: 600; font-size: 15px; padding: 4px 0; min-height: 32px"><option>Toutes les marques</option></select>
+<select name="marque" style="border: 0; background: transparent; color: #0E0E10; font-weight: 600; font-size: 15px; padding: 4px 0; min-height: 32px"><option value="">Toutes les marques</option><option value="dacia">Dacia</option><option value="renault">Renault</option><option value="peugeot">Peugeot</option><option value="toyota">Toyota</option><option value="hyundai">Hyundai</option><option value="kia">Kia</option><option value="volkswagen">Volkswagen</option><option value="chery">Chery</option><option value="byd">BYD</option><option value="mg">MG</option></select>
 </label>
-<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 2px; padding: 16px 22px; border-right: 1px solid #ECEDEF; font-size: 12px; color: #4A4D55">Modèle
-<select style="border: 0; background: transparent; color: #0E0E10; font-weight: 600; font-size: 15px; padding: 4px 0; min-height: 32px"><option>Tous les modèles</option></select>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 2px; padding: 16px 22px; border-right: 1px solid #ECEDEF; font-size: 12px; color: #4A4D55">Énergie
+<select name="energie" style="border: 0; background: transparent; color: #0E0E10; font-weight: 600; font-size: 15px; padding: 4px 0; min-height: 32px"><option value="">Toutes</option><option>Essence</option><option>Diesel</option><option>Hybride</option><option>Hybride rechargeable</option><option>Électrique</option></select>
 </label>
 <label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 2px; padding: 16px 22px; border-right: 1px solid #ECEDEF; font-size: 12px; color: #4A4D55">Budget maximum
-<select style="border: 0; background: transparent; color: #0E0E10; font-weight: 600; font-size: 15px; padding: 4px 0; min-height: 32px"><option>Tous les budgets</option></select>
+<select name="budget" style="border: 0; background: transparent; color: #0E0E10; font-weight: 600; font-size: 15px; padding: 4px 0; min-height: 32px"><option value="">Tous les budgets</option><option value="150000">Moins de 150 000 DH</option><option value="200000">Moins de 200 000 DH</option><option value="300000">Moins de 300 000 DH</option><option value="500000">Moins de 500 000 DH</option></select>
 </label>
 <label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 2px; padding: 16px 22px; font-size: 12px; color: #4A4D55">Carrosserie
-<select style="border: 0; background: transparent; color: #0E0E10; font-weight: 600; font-size: 15px; padding: 4px 0; min-height: 32px"><option>Toutes</option></select>
+<select name="carrosserie" style="border: 0; background: transparent; color: #0E0E10; font-weight: 600; font-size: 15px; padding: 4px 0; min-height: 32px"><option value="">Toutes</option><option>Citadine</option><option>Compacte</option><option>Berline</option><option>SUV</option><option>Crossover</option><option>Monospace</option><option>Pick-up</option></select>
 </label>
-<button type="button" style="flex: 0 1 180px; min-height: 76px; border: 0; background: #E10600; color: #FFFFFF; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer">Rechercher</button>
+<button type="submit" style="flex: 0 1 180px; min-height: 76px; border: 0; background: #E10600; color: #FFFFFF; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer">Rechercher</button>
 </form>
 </div>
 </section>
@@ -125,11 +125,11 @@ select,input{font:inherit}
 <section style="max-width: 1320px; margin: 0 auto; padding: 88px 24px 40px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 32px">
 <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -1px">Prix par marque</h2>
-<a href="#" style="min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 999px; background: #0E0E10; color: #FFFFFF; font-size: 14px; font-weight: 600">Toutes les marques <span aria-hidden="true">→</span></a>
+<a href="/marques" style="min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 999px; background: #0E0E10; color: #FFFFFF; font-size: 14px; font-weight: 600">Toutes les marques <span aria-hidden="true">→</span></a>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px">
 
-<a href="#" style="position: relative; aspect-ratio: 4 / 5; background: #D9DADD; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; color: #4A4D55; font-size: 13px">
+<a href="/marques/dacia" style="position: relative; aspect-ratio: 4 / 5; background: #D9DADD; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; color: #4A4D55; font-size: 13px">
 <span style="position: absolute; left: 20px; top: 16px; font-family: Poppins, sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; color: #0E0E10">Dacia</span>
 Photo — Dacia
 <span style="position: absolute; right: 16px; bottom: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
@@ -137,7 +137,7 @@ Photo — Dacia
 </span>
 </a>
 
-<a href="#" style="position: relative; aspect-ratio: 4 / 5; background: #D9DADD; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; color: #4A4D55; font-size: 13px">
+<a href="/marques/chery" style="position: relative; aspect-ratio: 4 / 5; background: #D9DADD; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; color: #4A4D55; font-size: 13px">
 <span style="position: absolute; left: 20px; top: 16px; font-family: Poppins, sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; color: #0E0E10">Chery</span>
 Photo — Chery
 <span style="position: absolute; right: 16px; bottom: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
@@ -145,7 +145,7 @@ Photo — Chery
 </span>
 </a>
 
-<a href="#" style="position: relative; aspect-ratio: 4 / 5; background: #D9DADD; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; color: #4A4D55; font-size: 13px">
+<a href="/marques/byd" style="position: relative; aspect-ratio: 4 / 5; background: #D9DADD; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; color: #4A4D55; font-size: 13px">
 <span style="position: absolute; left: 20px; top: 16px; font-family: Poppins, sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; color: #0E0E10">BYD</span>
 Photo — BYD
 <span style="position: absolute; right: 16px; bottom: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
@@ -153,7 +153,7 @@ Photo — BYD
 </span>
 </a>
 
-<a href="#" style="position: relative; aspect-ratio: 4 / 5; background: #D9DADD; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; color: #4A4D55; font-size: 13px">
+<a href="/marques/volkswagen" style="position: relative; aspect-ratio: 4 / 5; background: #D9DADD; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; color: #4A4D55; font-size: 13px">
 <span style="position: absolute; left: 20px; top: 16px; font-family: Poppins, sans-serif; font-weight: 600; font-size: 26px; line-height: 1.1; color: #0E0E10">Volkswagen</span>
 Photo — Volkswagen
 <span style="position: absolute; right: 16px; bottom: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
@@ -163,35 +163,17 @@ Photo — Volkswagen
 
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px">
+<a href="/marques/renault" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Renault</a>
 
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Audi</a>
+<a href="/marques/peugeot" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Peugeot</a>
 
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Cupra</a>
+<a href="/marques/toyota" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Toyota</a>
 
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Geely</a>
+<a href="/marques/hyundai" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Hyundai</a>
 
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Hyundai</a>
+<a href="/marques/kia" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Kia</a>
 
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Jaecoo</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Kia</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">MG</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Omoda</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Peugeot</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Renault</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Seat</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Skoda</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Toyota</a>
-
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">Mercedes-Benz</a>
-
+<a href="/marques/mg" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DADBDE; font-size: 14px; font-weight: 500">MG</a>
 </div>
 </section>
 
@@ -200,7 +182,7 @@ Photo — Volkswagen
 <div style="max-width: 1320px; margin: 0 auto; padding: 80px 24px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 32px">
 <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -1px">Les plus recherchés</h2>
-<a href="#" style="min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 999px; background: #E10600; color: #FFFFFF; font-size: 14px; font-weight: 600">Tout voir <span aria-hidden="true">→</span></a>
+<a href="/neuf" style="min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 999px; background: #E10600; color: #FFFFFF; font-size: 14px; font-weight: 600">Tout voir <span aria-hidden="true">→</span></a>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: #D3D4D8; border: 1px solid #D3D4D8">
 
@@ -209,16 +191,16 @@ Photo — Volkswagen
 <span style="flex: 1; min-height: 140px; background: #E6E7E9; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A4D55">Photo détourée</span>
 <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
 <span style="font-size: 14px"><span style="color: #4A4D55">Dès</span> <strong>Prix bientôt</strong></span>
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 1px solid #0E0E10; font-size: 13px; font-weight: 600; background: #FFFFFF">Voir la fiche</a>
+<a href="/neuf/dacia/sandero" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 1px solid #0E0E10; font-size: 13px; font-weight: 600; background: #FFFFFF">Voir la fiche</a>
 </span>
 </article>
 
 <article style="background: #FFFFFF; padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 340px">
-<h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.25">Chery Tiggo 4</h3>
+<h3 style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.25">Chery Tiggo 4 Cross</h3>
 <span style="flex: 1; min-height: 140px; background: #E6E7E9; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A4D55">Photo détourée</span>
 <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
 <span style="font-size: 14px"><span style="color: #4A4D55">Dès</span> <strong>Prix bientôt</strong></span>
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 1px solid #0E0E10; font-size: 13px; font-weight: 600; background: #FFFFFF">Voir la fiche</a>
+<a href="/neuf/chery/tiggo-4-cross" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 1px solid #0E0E10; font-size: 13px; font-weight: 600; background: #FFFFFF">Voir la fiche</a>
 </span>
 </article>
 
@@ -227,7 +209,7 @@ Photo — Volkswagen
 <span style="flex: 1; min-height: 140px; background: #E6E7E9; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A4D55">Photo détourée</span>
 <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
 <span style="font-size: 14px"><span style="color: #4A4D55">Dès</span> <strong>Prix bientôt</strong></span>
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 1px solid #0E0E10; font-size: 13px; font-weight: 600; background: #FFFFFF">Voir la fiche</a>
+<a href="/neuf/mg/zs" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 1px solid #0E0E10; font-size: 13px; font-weight: 600; background: #FFFFFF">Voir la fiche</a>
 </span>
 </article>
 
@@ -236,7 +218,7 @@ Photo — Volkswagen
 <span style="flex: 1; min-height: 140px; background: #E6E7E9; border: 1px dashed #A9ABB0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A4D55">Photo détourée</span>
 <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
 <span style="font-size: 14px"><span style="color: #4A4D55">Dès</span> <strong>Prix bientôt</strong></span>
-<a href="#" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 1px solid #0E0E10; font-size: 13px; font-weight: 600; background: #FFFFFF">Voir la fiche</a>
+<a href="/neuf/volkswagen/t-roc" style="min-height: 40px; display: flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 1px solid #0E0E10; font-size: 13px; font-weight: 600; background: #FFFFFF">Voir la fiche</a>
 </span>
 </article>
 
@@ -259,7 +241,7 @@ Photo — Volkswagen
 <span style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: #B4B6BC">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>Mis à jour chaque mois</span>
 </div>
-<a href="#" style="align-self: flex-start; min-height: 50px; display: flex; align-items: center; gap: 10px; padding: 0 24px; background: #E10600; color: #FFFFFF; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase">Voir le classement <span aria-hidden="true">→</span></a>
+<a href="/prix-par-cheval" style="align-self: flex-start; min-height: 50px; display: flex; align-items: center; gap: 10px; padding: 0 24px; background: #E10600; color: #FFFFFF; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase">Voir le classement <span aria-hidden="true">→</span></a>
 </div>
 <div style="flex: 999 1 560px; min-width: 0; overflow-x: auto">
 <table style="width: 100%; min-width: 560px; border-collapse: collapse; font-size: 16px">
@@ -326,11 +308,11 @@ Photo — Volkswagen
 <span style="display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #4A4D55"><span style="width: 36px; height: 2px; background: #0E0E10; display: inline-block"></span>Essais vidéo</span>
 <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.05; letter-spacing: -1px; text-transform: uppercase">Essayés. Filmés. Notés.</h2>
 <p style="margin: 0; color: #4A4D55">Des essais en darija, sans langue de bois, sur les modèles que les Marocains achètent vraiment.</p>
-<a href="#" style="align-self: flex-start; min-height: 46px; display: flex; align-items: center; gap: 10px; padding: 0 20px; border: 1.5px solid #0E0E10; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase">Tous les essais <span aria-hidden="true">→</span></a>
+<a href="/essais" style="align-self: flex-start; min-height: 46px; display: flex; align-items: center; gap: 10px; padding: 0 20px; border: 1.5px solid #0E0E10; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase">Tous les essais <span aria-hidden="true">→</span></a>
 </div>
 <div style="flex: 999 1 720px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px">
 
-<a href="#" style="position: relative; aspect-ratio: 3 / 4; background: #1C1D21; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: #FFFFFF; overflow: hidden">
+<a href="/essais" style="position: relative; aspect-ratio: 3 / 4; background: #1C1D21; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: #FFFFFF; overflow: hidden">
 <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #8E9097; padding-bottom: 80px">Miniature — Chery Tiggo 7 Pro</span>
 <span style="position: absolute; right: 16px; top: 16px; width: 44px; height: 44px; border-radius: 50%; background: #E10600; display: flex; align-items: center; justify-content: center">
 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z" fill="#FFFFFF"></path></svg>
@@ -340,7 +322,7 @@ Photo — Volkswagen
 <span style="position: relative; font-size: 13px; color: #B4B6BC; margin-top: 4px">Notre essai complet</span>
 </a>
 
-<a href="#" style="position: relative; aspect-ratio: 3 / 4; background: #1C1D21; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: #FFFFFF; overflow: hidden">
+<a href="/essais" style="position: relative; aspect-ratio: 3 / 4; background: #1C1D21; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: #FFFFFF; overflow: hidden">
 <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #8E9097; padding-bottom: 80px">Miniature — BYD Seal U DM-i</span>
 <span style="position: absolute; right: 16px; top: 16px; width: 44px; height: 44px; border-radius: 50%; background: #E10600; display: flex; align-items: center; justify-content: center">
 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z" fill="#FFFFFF"></path></svg>
@@ -350,7 +332,7 @@ Photo — Volkswagen
 <span style="position: relative; font-size: 13px; color: #B4B6BC; margin-top: 4px">Consommation réelle sur autoroute</span>
 </a>
 
-<a href="#" style="position: relative; aspect-ratio: 3 / 4; background: #1C1D21; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: #FFFFFF; overflow: hidden">
+<a href="/essais" style="position: relative; aspect-ratio: 3 / 4; background: #1C1D21; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: #FFFFFF; overflow: hidden">
 <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #8E9097; padding-bottom: 80px">Miniature — Dacia Duster</span>
 <span style="position: absolute; right: 16px; top: 16px; width: 44px; height: 44px; border-radius: 50%; background: #E10600; display: flex; align-items: center; justify-content: center">
 <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z" fill="#FFFFFF"></path></svg>
@@ -370,7 +352,7 @@ Photo — Volkswagen
 <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; border: 1px solid #4A4D55; padding: 6px 12px; border-radius: 999px">Offre limitée</span>
 <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 50px); line-height: 1.02; letter-spacing: -1px">Les promos du mois, toutes marques</h2>
 <p style="margin: 0; color: #B4B6BC; max-width: 400px">Remises, reprises et financements : on compare les offres des concessionnaires pour vous.</p>
-<a href="#" style="align-self: flex-start; min-height: 50px; display: flex; align-items: center; gap: 10px; padding: 0 24px; border-radius: 999px; background: #FFFFFF; color: #0E0E10; font-weight: 700; font-size: 14px">Voir les promos <span aria-hidden="true">→</span></a>
+<a href="/promos" style="align-self: flex-start; min-height: 50px; display: flex; align-items: center; gap: 10px; padding: 0 24px; border-radius: 999px; background: #FFFFFF; color: #0E0E10; font-weight: 700; font-size: 14px">Voir les promos <span aria-hidden="true">→</span></a>
 </div>
 <div style="flex: 999 1 480px; min-height: 360px; position: relative; background: #1C1D21; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #8E9097">
 Photo — voiture en promo
@@ -386,11 +368,11 @@ Photo — voiture en promo
 <section style="max-width: 1320px; margin: 0 auto; padding: 48px 24px 40px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 32px">
 <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -1px">Face à face</h2>
-<a href="#" style="min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 999px; background: #0E0E10; color: #FFFFFF; font-size: 14px; font-weight: 600">Tous les comparatifs <span aria-hidden="true">→</span></a>
+<a href="/comparatifs" style="min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 999px; background: #0E0E10; color: #FFFFFF; font-size: 14px; font-weight: 600">Tous les comparatifs <span aria-hidden="true">→</span></a>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px">
 
-<a href="#" style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 18px; border-radius: 16px">
+<a href="/comparatifs" style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 18px; border-radius: 16px">
 <span style="display: flex; align-items: center; gap: 10px">
 <span style="flex: 1; aspect-ratio: 4 / 3; background: #ECEDEF; border: 1px dashed #A9ABB0; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A4D55">Photo</span>
 <span style="width: 44px; height: 44px; border-radius: 50%; background: #0E0E10; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">VS</span>
@@ -400,7 +382,7 @@ Photo — voiture en promo
 <span style="font-size: 14px; color: #4A4D55">Prix, puissance, équipements, DH/ch : lequel choisir&#160;?</span>
 </a>
 
-<a href="#" style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 18px; border-radius: 16px">
+<a href="/comparatifs" style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 18px; border-radius: 16px">
 <span style="display: flex; align-items: center; gap: 10px">
 <span style="flex: 1; aspect-ratio: 4 / 3; background: #ECEDEF; border: 1px dashed #A9ABB0; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A4D55">Photo</span>
 <span style="width: 44px; height: 44px; border-radius: 50%; background: #0E0E10; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">VS</span>
@@ -410,7 +392,7 @@ Photo — voiture en promo
 <span style="font-size: 14px; color: #4A4D55">Prix, puissance, équipements, DH/ch : lequel choisir&#160;?</span>
 </a>
 
-<a href="#" style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 18px; border-radius: 16px">
+<a href="/comparatifs" style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 18px; border-radius: 16px">
 <span style="display: flex; align-items: center; gap: 10px">
 <span style="flex: 1; aspect-ratio: 4 / 3; background: #ECEDEF; border: 1px dashed #A9ABB0; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #4A4D55">Photo</span>
 <span style="width: 44px; height: 44px; border-radius: 50%; background: #0E0E10; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">VS</span>
@@ -431,12 +413,12 @@ Photo — voiture en promo
 <h2 style="margin: 0; font-family: Poppins, sans-serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.05; letter-spacing: -1px; text-transform: uppercase">Le meilleur prix, sans faire le tour des concessions.</h2>
 <p style="margin: 0; color: #4A4D55; max-width: 420px">Dites-nous quelle voiture vous intéresse, on transmet votre demande aux concessionnaires officiels.</p>
 </div>
-<form action="mailto:contact@horsepower.ma" method="post" enctype="text/plain" style="flex: 999 1 560px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px 32px; align-content: start">
+<form action="/api/leads" method="post" style="flex: 999 1 560px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px 32px; align-content: start">
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #4A4D55">Prénom
-<input type="text" name="prenom" style="border: 0; border-bottom: 1.5px solid #0E0E10; background: transparent; min-height: 40px; font-size: 16px; color: #0E0E10">
+<input type="hidden" name="source" value="accueil"><input type="text" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px"><input type="text" name="prenom" required style="border: 0; border-bottom: 1.5px solid #0E0E10; background: transparent; min-height: 40px; font-size: 16px; color: #0E0E10">
 </label>
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #4A4D55">Téléphone / WhatsApp
-<input type="tel" name="telephone" style="border: 0; border-bottom: 1.5px solid #0E0E10; background: transparent; min-height: 40px; font-size: 16px; color: #0E0E10">
+<input type="tel" name="telephone" required style="border: 0; border-bottom: 1.5px solid #0E0E10; background: transparent; min-height: 40px; font-size: 16px; color: #0E0E10">
 </label>
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #4A4D55">Modèle qui vous intéresse
 <input type="text" name="modele" style="border: 0; border-bottom: 1.5px solid #0E0E10; background: transparent; min-height: 40px; font-size: 16px; color: #0E0E10">
@@ -456,22 +438,17 @@ Photo — voiture en promo
 <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 14px">
 <span><span style="font-family: Poppins, sans-serif; font-weight: 800; font-size: 22px">HORSEPOWER</span><span style="font-family: Poppins, sans-serif; font-weight: 400; font-size: 15px; color: #B4B6BC">.ma</span></span>
 <p style="margin: 0; color: #B4B6BC; font-size: 14px; max-width: 300px">Prix des voitures neuves au Maroc, essais vidéo et comparatifs.</p>
-<div style="display: flex; gap: 10px; font-size: 13px">
-<a href="#" style="color: #FFFFFF; border: 1px solid #3A3B40; border-radius: 999px; padding: 8px 14px">Instagram</a>
-<a href="#" style="color: #FFFFFF; border: 1px solid #3A3B40; border-radius: 999px; padding: 8px 14px">TikTok</a>
-<a href="#" style="color: #FFFFFF; border: 1px solid #3A3B40; border-radius: 999px; padding: 8px 14px">YouTube</a>
-</div>
 </div>
 <nav aria-label="Pied de page" style="flex: 2 1 560px; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px 24px; font-size: 14px">
-<a href="#" style="color: #FFFFFF">Voitures neuves</a>
-<a href="#" style="color: #FFFFFF">Électrique &amp; hybride</a>
-<a href="#" style="color: #FFFFFF">Essais vidéo</a>
-<a href="#" style="color: #FFFFFF">Comparatifs</a>
-<a href="#" style="color: #FFFFFF">Promos</a>
-<a href="#" style="color: #FFFFFF">Prix / cheval</a>
-<a href="#" style="color: #FFFFFF">Actualités</a>
-<a href="#" style="color: #FFFFFF">Publicité</a>
-<a href="#" style="color: #FFFFFF">Contact</a>
+<a href="/neuf" style="color: #FFFFFF">Voitures neuves</a>
+<a href="/neuf?energie=Hybride" style="color: #FFFFFF">Électrique &amp; hybride</a>
+<a href="/essais" style="color: #FFFFFF">Essais vidéo</a>
+<a href="/comparatifs" style="color: #FFFFFF">Comparatifs</a>
+<a href="/promos" style="color: #FFFFFF">Promos</a>
+<a href="/prix-par-cheval" style="color: #FFFFFF">Prix / cheval</a>
+<a href="/actualites" style="color: #FFFFFF">Actualités</a>
+<a href="/publicite" style="color: #FFFFFF">Publicité</a>
+<a href="/contact" style="color: #FFFFFF">Contact</a>
 </nav>
 </div>
 <div style="max-width: 1320px; margin: 0 auto; padding: 20px 24px 32px; border-top: 1px solid #2A2B30; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; color: #B4B6BC">

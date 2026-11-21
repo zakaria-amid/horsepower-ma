@@ -1,8 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Horsepower.ma',
-  robots: { index: false, follow: false },
+  metadataBase: new URL('https://horsepower.ma'),
+  title: 'Horsepower.ma — Prix des voitures neuves au Maroc',
+  description: 'Tous les prix des voitures neuves au Maroc, essais vidéo en darija, comparatifs et classement prix par cheval.',
 };
 
 export default function RootLayout({ children }) {
