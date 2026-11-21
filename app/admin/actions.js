@@ -259,8 +259,8 @@ export async function addPhoto(input) {
   }
   const [{ next }] = await q('select coalesce(max(position) + 1, 0)::int as next from photos where model_id = $1', [modelId]);
   await q(
-    `insert into photos (model_id, url, thumb_url, width, height, bytes, thumb_bytes, original_bytes, alt, position)
-     values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+    `insert into photos (model_id, url, thumb_url, width, height, bytes, thumb_bytes, original_bytes, alt, position, credit, source_url)
+     values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
     [
       modelId,
       input.url,
@@ -272,6 +272,8 @@ export async function addPhoto(input) {
       n(input.originalBytes),
       String(input.alt || '').slice(0, 160) || null,
       next,
+      String(input.credit || '').slice(0, 120) || null,
+      /^https?:\/\//i.test(String(input.sourceUrl || '')) ? String(input.sourceUrl).slice(0, 1000) : null,
     ]
   );
   revalidatePath(`/admin/modeles/${modelId}`);

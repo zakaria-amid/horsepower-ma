@@ -112,6 +112,7 @@ export default async function ModelPage({ params, searchParams }) {
                     {i === 0 ? 'Photo principale · ' : ''}
                     {p.width}×{p.height} · {Math.round((p.bytes || 0) / 1024)} Ko
                   </span>
+                  {p.credit && <span className="credit">{p.credit}</span>}
                   <span className="photo-actions">
                     {i !== 0 && (
                       <form action={setCoverPhoto}>
@@ -134,9 +135,9 @@ export default async function ModelPage({ params, searchParams }) {
             ))}
           </div>
         )}
-        <PhotoUploader modelId={model.id} slug={model.slug} altBase={`${model.brand_name} ${model.name}`} />
+        <PhotoUploader modelId={model.id} slug={model.slug} altBase={`${model.brand_name} ${model.name}`} brandName={model.brand_name} />
         <p className="hint-text">
-          Utilisez vos propres photos ou celles des espaces presse des marques, avec leur autorisation.
+          Photos des espaces presse : gardez le crédit de la marque, il sera affiché sous la photo sur le site.
         </p>
       </section>
 

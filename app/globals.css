@@ -132,3 +132,9 @@ td{vertical-align:middle}
 .upload-log li.ko{background:#FDECEC;color:#8A0A10}
 .upload-log .name{font-weight:600}
 .uploader{display:flex;flex-direction:column;gap:10px}
+.import-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.import-links .field{width:100%}
+.field textarea{border:1.5px solid #D3D4D8;border-radius:10px;background:#fff;color:#0E0E10;padding:10px 12px;font-size:14px;letter-spacing:0;text-transform:none;width:100%;resize:vertical;font-family:inherit}
+.field textarea:focus{border-color:#0E0E10;outline:none}
+.photo .credit{font-style:italic}
+.btn-ghost:disabled{opacity:.5;cursor:progress}
