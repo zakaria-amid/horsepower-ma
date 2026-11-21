@@ -1,6 +1,8 @@
 'use server';
 
 import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
+import { del } from '@vercel/blob';
 import { requireAdmin } from '../../lib/session';
 import { ensureSchema, q, slugify, BODY_TYPES, FUELS, GEARBOXES, STATUSES, PRICE_SOURCES } from '../../lib/db';
 
@@ -234,6 +236,82 @@ export async function deleteVersion(form) {
     target = back(`/admin/modeles/${modelId}`, 'ok', 'Version supprimée.');
   } catch (err) {
     target = back(`/admin/modeles/${modelId}`, 'erreur', explain(err, 'Impossible de supprimer la version.'));
+  }
+  redirect(target);
+}
+
+/* ---------------- Photos ---------------- */
+
+const BLOB_URL = /^https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\/modeles\/\d+\/[A-Za-z0-9-]+\.webp$/;
+
+function n(value) {
+  const v = Number.parseInt(value, 10);
+  return Number.isFinite(v) && v >= 0 ? v : null;
+}
+
+// Appelée par le composant d'envoi après la compression et l'envoi des deux tailles.
+export async function addPhoto(input) {
+  await requireAdmin();
+  await ensureSchema();
+  const modelId = n(input?.modelId);
+  if (!modelId || !BLOB_URL.test(String(input?.url)) || !BLOB_URL.test(String(input?.thumbUrl))) {
+    throw new Error('Photo refusée.');
+  }
+  const [{ next }] = await q('select coalesce(max(position) + 1, 0)::int as next from photos where model_id = $1', [modelId]);
+  await q(
+    `insert into photos (model_id, url, thumb_url, width, height, bytes, thumb_bytes, original_bytes, alt, position)
+     values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+    [
+      modelId,
+      input.url,
+      input.thumbUrl,
+      n(input.width),
+      n(input.height),
+      n(input.bytes),
+      n(input.thumbBytes),
+      n(input.originalBytes),
+      String(input.alt || '').slice(0, 160) || null,
+      next,
+    ]
+  );
+  revalidatePath(`/admin/modeles/${modelId}`);
+  return { ok: true };
+}
+
+export async function deletePhoto(form) {
+  await requireAdmin();
+  await ensureSchema();
+  const id = int(form, 'id');
+  const modelId = int(form, 'model_id');
+  let target = `/admin/modeles/${modelId}`;
+  try {
+    const rows = await q('delete from photos where id = $1 returning url, thumb_url', [id]);
+    if (rows[0]) {
+      try {
+        await del([rows[0].url, rows[0].thumb_url]);
+      } catch (err) {
+        console.error('Suppression Blob', err);
+      }
+    }
+    target = back(`/admin/modeles/${modelId}`, 'ok', 'Photo supprimée.');
+  } catch (err) {
+    target = back(`/admin/modeles/${modelId}`, 'erreur', explain(err, 'Impossible de supprimer la photo.'));
+  }
+  redirect(target);
+}
+
+export async function setCoverPhoto(form) {
+  await requireAdmin();
+  await ensureSchema();
+  const id = int(form, 'id');
+  const modelId = int(form, 'model_id');
+  let target = `/admin/modeles/${modelId}`;
+  try {
+    await q('update photos set position = position + 1 where model_id = $1', [modelId]);
+    await q('update photos set position = 0 where id = $1 and model_id = $2', [id, modelId]);
+    target = back(`/admin/modeles/${modelId}`, 'ok', 'Photo principale mise à jour.');
+  } catch (err) {
+    target = back(`/admin/modeles/${modelId}`, 'erreur', explain(err, 'Impossible de changer la photo principale.'));
   }
   redirect(target);
 }

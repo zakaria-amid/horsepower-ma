@@ -1,9 +1,10 @@
 import { notFound } from 'next/navigation';
 import AdminShell, { Flash, formatPrice, pricePerHp } from '../../../../components/AdminShell';
 import VersionFields from '../../../../components/VersionFields';
+import PhotoUploader from '../../../../components/PhotoUploader';
 import { requireAdmin } from '../../../../lib/session';
 import { ensureSchema, q, BODY_TYPES, FUELS, STATUSES } from '../../../../lib/db';
-import { updateModel, createVersion, deleteVersion } from '../../actions';
+import { updateModel, createVersion, deleteVersion, deletePhoto, setCoverPhoto } from '../../actions';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Modèle — Admin Horsepower.ma' };
@@ -25,6 +26,8 @@ export default async function ModelPage({ params, searchParams }) {
   if (!model) notFound();
   const brands = await q('select id, name from brands order by name');
   const versions = await q('select * from versions where model_id = $1 order by price_mad nulls last, name', [modelId]);
+  const photos = await q('select * from photos where model_id = $1 order by position, id', [modelId]);
+  const totalKb = Math.round(photos.reduce((sum, p) => sum + (p.bytes || 0) + (p.thumb_bytes || 0), 0) / 1024);
 
   return (
     <AdminShell
@@ -89,6 +92,52 @@ export default async function ModelPage({ params, searchParams }) {
             Enregistrer
           </button>
         </form>
+      </section>
+
+
+      <section className="panel">
+        <div className="panel-head">
+          <h2>
+            {photos.length} photo{photos.length > 1 ? 's' : ''}
+          </h2>
+          {photos.length > 0 && <span className="hint-text">{totalKb.toLocaleString('fr-FR')} Ko au total, miniatures comprises</span>}
+        </div>
+        {photos.length > 0 && (
+          <div className="photo-grid">
+            {photos.map((p, i) => (
+              <figure key={p.id} className={i === 0 ? 'photo cover' : 'photo'}>
+                <img src={p.thumb_url} alt={p.alt || `${model.brand_name} ${model.name}`} width={p.width ? 640 : undefined} loading="lazy" decoding="async" />
+                <figcaption>
+                  <span>
+                    {i === 0 ? 'Photo principale · ' : ''}
+                    {p.width}×{p.height} · {Math.round((p.bytes || 0) / 1024)} Ko
+                  </span>
+                  <span className="photo-actions">
+                    {i !== 0 && (
+                      <form action={setCoverPhoto}>
+                        <input type="hidden" name="id" value={p.id} />
+                        <input type="hidden" name="model_id" value={model.id} />
+                        <button type="submit" className="link-btn">Mettre en principale</button>
+                      </form>
+                    )}
+                    <details className="confirm">
+                      <summary className="link-btn danger">Supprimer</summary>
+                      <form action={deletePhoto}>
+                        <input type="hidden" name="id" value={p.id} />
+                        <input type="hidden" name="model_id" value={model.id} />
+                        <button type="submit" className="btn-danger">Oui, supprimer</button>
+                      </form>
+                    </details>
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        )}
+        <PhotoUploader modelId={model.id} slug={model.slug} altBase={`${model.brand_name} ${model.name}`} />
+        <p className="hint-text">
+          Utilisez vos propres photos ou celles des espaces presse des marques, avec leur autorisation.
+        </p>
       </section>
 
       <section className="panel">

@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
+  // Pas d'optimisation d'image côté Vercel : les photos sont déjà compressées en WebP dans le navigateur.
+  images: { unoptimized: true },
   async rewrites() {
     return {
       // La page d'accueil publique reste le fichier statique public/home.html
