@@ -1,0 +1,71 @@
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Poppins,system-ui,sans-serif;background:#F4F4F2;color:#0E0E10;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+:focus-visible{outline:2px solid #E10600;outline-offset:2px}
+
+/* ---------- Connexion ---------- */
+.login{min-height:100vh;display:flex;flex-wrap:wrap}
+.login-brand{flex:1 1 420px;background:#0E0E10;color:#fff;padding:48px;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.3px}
+.logo span{font-weight:400;font-size:15px;color:#B4B6BC}
+.login-brand h1{margin:0;font-weight:600;font-size:clamp(36px,5vw,60px);line-height:1.02;letter-spacing:-1.5px;text-transform:uppercase}
+.login-brand h1 em{font-style:normal;color:#E10600}
+.login-brand p{margin:0;color:#B4B6BC;font-size:14px}
+.login-panel{flex:1 1 420px;display:flex;align-items:center;justify-content:center;padding:48px 24px}
+.login-card{width:100%;max-width:400px;display:flex;flex-direction:column;gap:22px}
+.login-card h2{margin:0;font-weight:700;font-size:28px;letter-spacing:-.5px}
+.login-card .sub{margin:-12px 0 0;color:#4A4D55;font-size:14px}
+.field{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#4A4D55}
+.field input{min-height:50px;border:1.5px solid #D3D4D8;border-radius:10px;background:#fff;color:#0E0E10;padding:0 14px;font-size:16px;letter-spacing:0;text-transform:none}
+.field input:focus{border-color:#0E0E10;outline:none}
+.btn-primary{min-height:52px;border:0;border-radius:999px;background:#E10600;color:#fff;font-weight:700;font-size:15px;cursor:pointer}
+.btn-primary:hover{background:#B5121B}
+.alert{background:#FDECEC;color:#8A0A10;border-radius:10px;padding:12px 14px;font-size:14px;font-weight:500}
+.back{font-size:13px;color:#4A4D55}
+
+/* ---------- Tableau de bord ---------- */
+.admin{min-height:100vh;display:flex;flex-wrap:wrap}
+.side{flex:0 0 260px;background:#0E0E10;color:#fff;padding:28px 18px;display:flex;flex-direction:column;gap:28px}
+.side .logo{padding:0 10px}
+.side nav{display:flex;flex-direction:column;gap:4px}
+.side nav a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;padding:0 12px;border-radius:10px;color:#D6D7DA;font-size:14px;font-weight:500}
+.side nav a:hover{background:#1C1D21;color:#fff}
+.side nav a.active{background:#fff;color:#0E0E10;font-weight:600}
+.tag-soon{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#8E9097}
+.side nav a.active .tag-soon{color:#4A4D55}
+.side-foot{margin-top:auto;padding:0 10px;font-size:12px;color:#8E9097}
+.main{flex:999 1 560px;min-width:0;padding:28px clamp(20px,4vw,48px) 64px;display:flex;flex-direction:column;gap:28px}
+.topbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.topbar h1{margin:0;font-weight:700;font-size:30px;letter-spacing:-.5px}
+.topbar .who{display:flex;align-items:center;gap:12px;font-size:14px;color:#4A4D55}
+.btn-ghost{min-height:42px;padding:0 18px;border-radius:999px;border:1.5px solid #0E0E10;background:transparent;color:#0E0E10;font-weight:600;font-size:14px;cursor:pointer}
+.btn-ghost:hover{background:#0E0E10;color:#fff}
+.notice{display:flex;gap:14px;align-items:flex-start;background:#fff;border-left:4px solid #E10600;border-radius:12px;padding:18px 20px}
+.notice b{display:block;font-size:15px}
+.notice span{font-size:14px;color:#4A4D55}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.stat{background:#fff;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.stat .label{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#4A4D55}
+.stat .value{font-weight:600;font-size:34px;line-height:1.1}
+.stat .hint{font-size:12px;color:#4A4D55}
+.grid2{display:flex;flex-wrap:wrap;gap:20px}
+.panel{flex:1 1 380px;min-width:0;background:#fff;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.panel h2{margin:0;font-size:18px;font-weight:700}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.steps li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid #ECEDEF}
+.steps .n{flex:0 0 30px;height:30px;border-radius:50%;background:#0E0E10;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600}
+.steps .n.done{background:#E10600}
+.steps b{display:block;font-size:14px}
+.steps span{font-size:13px;color:#4A4D55}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:420px}
+th{text-align:left;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#4A4D55;padding:10px 12px 10px 0}
+td{padding:12px 12px 12px 0;border-top:1px solid #ECEDEF}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:#ECEDEF;color:#4A4D55}
+.pill.ok{background:#E7F6EC;color:#0F6B2F}
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.quick a{min-height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-radius:12px;background:#F4F4F2;font-weight:600;font-size:14px}
+.quick a:hover{background:#ECEDEF}
+@media (max-width:820px){.side{flex:1 1 100%;padding:18px}.side nav{flex-direction:row;flex-wrap:wrap}.side-foot{display:none}}
